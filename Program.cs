@@ -18,7 +18,7 @@ foreach (Employee employee in employees)
     System.Console.WriteLine("Items left in stack: " + employees.Count());
 }
 System.Console.WriteLine("-----------------");
-
+System.Console.WriteLine("Retrieve using pop");
 for (int i = 0; i < employeesArray.Length; i++)
 {
     Employee currentEmployee = employees.Pop();
@@ -26,3 +26,15 @@ for (int i = 0; i < employeesArray.Length; i++)
     System.Console.WriteLine("Items left in stack: " + employees.Count());
 }
 System.Console.WriteLine("-----------------");
+foreach (Employee employee in employeesArray)
+{
+    employees.Push(employee);
+}
+System.Console.WriteLine("-----------------");
+System.Console.WriteLine("Retrieve using Peek Method");
+for (int i = 0; i < 2; i++)
+{
+    Employee currentEmployee = employees.Peek();
+    System.Console.WriteLine($"{currentEmployee.id} - {currentEmployee.name} - {currentEmployee.gender} - {currentEmployee.salary}");
+    System.Console.WriteLine("Items left in stack: " + employees.Count());
+}
