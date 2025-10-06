@@ -5,19 +5,11 @@ using System.Threading.Tasks;
 // Id, Name, Gender, Salary.
 namespace Labb6
 {
-    public class Employee
+    public class Employee(int id, string name, string gender, int salary)
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string gender { get; set; }
-        public int salary { get; set; }
-
-        public Employee(int id, string name, string gender, int salary)
-        {
-            this.id = id;
-            this.name = name;
-            this.gender = gender;
-            this.salary = salary;
-        }
+        public int Id { get; set; } = id;
+        public string Name { get; set; } = name;
+        public string Gender { get; set; } = gender;
+        public int Salary { get; set; } = salary;
     }
 }
